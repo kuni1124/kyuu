@@ -53,126 +53,126 @@ class DaisController extends Controller
         return redirect('/randam-index')->with('flash_message', 'DELETE!');
     }
 
-    // public function create2()
-    // {
-    //     $shushokushikui = Shushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
-    //     $shushokushikui = $shushokushikui->shuffle();
-    //     $shushokustakai = Shushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
-    //     $shushokustakai = $shushokustakai->shuffle();
-    //     $count = 0; 
+    public function create2()
+    {
+        $shushokushikui = Shushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
+        $shushokushikui = $shushokushikui->shuffle();
+        $shushokustakai = Shushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
+        $shushokustakai = $shushokustakai->shuffle();
+        $count = 0; 
 
-    //     for ($i=0;$i<31;$i++){
-    //         $shushoku = null;
-    //         $div = intdiv($i,2);
-    //         if($i % 2 == 0 ){
-    //             if(isset($shushokushikui[$div])){
-    //                 $shushoku = $shushokushikui[$div];
-    //             }
+        for ($i=0;$i<31;$i++){
+            $shushoku = null;
+            $div = intdiv($i,2);
+            if($i % 2 == 0 ){
+                if(isset($shushokushikui[$div])){
+                    $shushoku = $shushokushikui[$div];
+                }
                
-    //         }else{
-    //             if(isset($shushokustakai[$div])){
-    //                 $shushoku = $shushokustakai[$div];
-    //             }
-    //         }
-    //         if(isset($shushoku)){
-    //         $randam = new Dai;
-    //         $randam->bunrui = $shushoku->bunrui;
-    //         $randam->kakaku = $shushoku->kakaku;
-    //         $randam->name = $shushoku->name;
-    //         $randam->genka = $shushoku->genka;
-    //         $randam->save();
-    //         $count += 1;
-    //         }
+            }else{
+                if(isset($shushokustakai[$div])){
+                    $shushoku = $shushokustakai[$div];
+                }
+            }
+            if(isset($shushoku)){
+            $randam = new Dai;
+            $randam->bunrui = $shushoku->bunrui;
+            $randam->kakaku = $shushoku->kakaku;
+            $randam->name = $shushoku->name;
+            $randam->genka = $shushoku->genka;
+            $randam->save();
+            $count += 1;
+            }
            
             
-    //     }
-    //     for ($i=0;$i<31-$count;$i++)  {
-    //         $randam = new Dai;
-    //         $randam->bunrui = null;
-    //         $randam->kakaku = null;
-    //         $randam->name = null;
-    //         $randam->genka = null;
-    //         $randam->save();
-    //     }
-    //  $fukushokushikui = Fukushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
-    //  $fukushokushikui = $fukushokushikui->shuffle();
-    //  $fukushokustakai = Fukushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
-    //  $fukushokustakai = $fukushokustakai->shuffle();
-    //  $count = 0;
+        }
+        for ($i=0;$i<31-$count;$i++)  {
+            $randam = new Dai;
+            $randam->bunrui = null;
+            $randam->kakaku = null;
+            $randam->name = null;
+            $randam->genka = null;
+            $randam->save();
+        }
+     $fukushokushikui = Fukushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
+     $fukushokushikui = $fukushokushikui->shuffle();
+     $fukushokustakai = Fukushoku::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
+     $fukushokustakai = $fukushokustakai->shuffle();
+     $count = 0;
 
-    //  for ($i=0;$i<31;$i++){
-    //         $fukushoku = null;
-    //         $div = intdiv($i,2);
-    //         if($i % 2 == 0 ){
-    //             if(isset($fukushokustakai[$div])){
-    //                 $fukushoku = $fukushokustakai[$div];
-    //             }
+     for ($i=0;$i<31;$i++){
+            $fukushoku = null;
+            $div = intdiv($i,2);
+            if($i % 2 == 0 ){
+                if(isset($fukushokustakai[$div])){
+                    $fukushoku = $fukushokustakai[$div];
+                }
                
-    //         }else{
-    //             if(isset($fukushokushikui[$div])){
-    //                 $fukushoku = $fukushokushikui[$div];
-    //             }
-    //         }
-    //         if(isset($fukushoku)){
-    //         $randam2 = new Tyuu;
-    //         $randam2->bunrui = $fukushoku->bunrui;
-    //         $randam2->kakaku = $fukushoku->kakaku;
-    //         $randam2->name = $fukushoku->name;
-    //         $randam2->genka = $fukushoku->genka;
-    //         $randam2->save();
-    //         $count += 1;
-    //         }}
+            }else{
+                if(isset($fukushokushikui[$div])){
+                    $fukushoku = $fukushokushikui[$div];
+                }
+            }
+            if(isset($fukushoku)){
+            $randam2 = new Tyuu;
+            $randam2->bunrui = $fukushoku->bunrui;
+            $randam2->kakaku = $fukushoku->kakaku;
+            $randam2->name = $fukushoku->name;
+            $randam2->genka = $fukushoku->genka;
+            $randam2->save();
+            $count += 1;
+            }}
 
-    //         for ($i=0;$i<31-$count;$i++)  {
-    //             $randam2 = new Tyuu;
-    //             $randam2->bunrui = null;
-    //             $randam2->kakaku = null;
-    //             $randam2->name = null;
-    //             $randam2->genka = null;
-    //             $randam2->save();
-    //         }
-    //  $sirumonoshikui = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
-    //  $sirumonoshikui = $sirumonoshikui->shuffle();
+            for ($i=0;$i<31-$count;$i++)  {
+                $randam2 = new Tyuu;
+                $randam2->bunrui = null;
+                $randam2->kakaku = null;
+                $randam2->name = null;
+                $randam2->genka = null;
+                $randam2->save();
+            }
+     $sirumonoshikui = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
+     $sirumonoshikui = $sirumonoshikui->shuffle();
     
-    //  $sirumonostakai = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
-    //  $sirumonostakai = $sirumonostakai->shuffle();
+     $sirumonostakai = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
+     $sirumonostakai = $sirumonostakai->shuffle();
     
-    //  $count = 0;
+     $count = 0;
 
-    //  for ($i=0;$i<31;$i++){
-    //     $sirumono = null;
-    //     $div = intdiv($i,2);
-    //     if($i % 2 == 0 ){
-    //         if(isset($sirumonostakai[$div])){
-    //             $sirumono = $sirumonostakai[$div];
-    //         }
+     for ($i=0;$i<31;$i++){
+        $sirumono = null;
+        $div = intdiv($i,2);
+        if($i % 2 == 0 ){
+            if(isset($sirumonostakai[$div])){
+                $sirumono = $sirumonostakai[$div];
+            }
            
-    //     }else{
-    //         if(isset($sirumonoshikui[$div])){
-    //             $sirumono = $sirumonoshikui[$div];
-    //         }
-    //     }
-    //     if(isset($sirumono)){
-    //     $randam3 = new Shou;
-    //     $randam3->bunrui = $sirumono->bunrui;
-    //     $randam3->kakaku = $sirumono->kakaku;
-    //     $randam3->name = $sirumono->name;
-    //     $randam3->genka = $sirumono->genka;
-    //     $randam3->save();
-    //     $count += 1;
-    //     }}
+        }else{
+            if(isset($sirumonoshikui[$div])){
+                $sirumono = $sirumonoshikui[$div];
+            }
+        }
+        if(isset($sirumono)){
+        $randam3 = new Shou;
+        $randam3->bunrui = $sirumono->bunrui;
+        $randam3->kakaku = $sirumono->kakaku;
+        $randam3->name = $sirumono->name;
+        $randam3->genka = $sirumono->genka;
+        $randam3->save();
+        $count += 1;
+        }}
 
-    //     for ($i=0;$i<31-$count;$i++)  {
-    //         $randam3 = new Shou;
-    //         $randam3->bunrui = null;
-    //         $randam3->kakaku = null;
-    //         $randam3->name = null;
-    //         $randam3->genka = null;
-    //         $randam3->save();
-    //     }
-    //      return redirect('/randam-index')->with('flash_message', 'DELETE!');
+        for ($i=0;$i<31-$count;$i++)  {
+            $randam3 = new Shou;
+            $randam3->bunrui = null;
+            $randam3->kakaku = null;
+            $randam3->name = null;
+            $randam3->genka = null;
+            $randam3->save();
+        }
+         return redirect('/randam-index')->with('flash_message', 'DELETE!');
        
-    // }
+    }
 
 
     public function edit($id)
