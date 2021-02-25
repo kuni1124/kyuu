@@ -17,7 +17,7 @@
                     <td>{{ $shushoku->bunrui }}</td>
                     <td>{{ $shushoku->kakaku }}</td>
                     <td>{{ $shushoku->name }}</td>
-                    <td>{{ $shushoku->genka }}</td>
+                    <td>{{ $shushoku->genka}}</td>
                     <td>{!! Form::model($shushoku, ['route' => ['shushoku-edit', $shushoku->id], 'method' => 'get']) !!}
                       {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
                     {!! Form::close() !!}</td>

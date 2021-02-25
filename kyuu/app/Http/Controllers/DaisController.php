@@ -343,7 +343,49 @@ class DaisController extends Controller
         $sirumonostakai = Sirumono::where('display', true)->where('bunrui' , '1')->where('kakaku' , '2')->get();
         $sirumonostakai = $sirumonostakai->shuffle();
     
-        $this->create_shoku_data('App\Shou', $sirumonoshikui, $sirumonostakai);
+        $dt = new Carbon('first day of next month');
+        $tukiowari =  $dt->daysInMonth;
+        $hikui = true;
+        $hikui_count = 0;
+        $takai_count = 0;
+        for ($i = 1;$i <= $tukiowari;$i++) {
+          if($dt->isSunday()){
+            $randam = new Shou;
+            $randam->bunrui = null;
+            $randam->kakaku = null;
+            $randam->name = null;
+            $randam->genka = null;
+            $randam->save();
+        } else {
+            $shoku = null;
+                
+            if($hikui){
+                if(isset($sirumonoshikui[$hikui_count])){
+                    $sirumono = $sirumonoshikui[$hikui_count];
+                    $hikui_count++;
+                }
+                $hikui = false;
+            }else{
+                if(isset($sirumonostakai[$takai_count])){
+                    $sirumono = $sirumonostakai[$takai_count];
+                    $takai_count++;
+                }
+                $hikui = true;
+            }
+            if(isset($sirumono)){
+                $randam = new Shou;
+                $randam->bunrui = $sirumono->bunrui;
+                $randam->kakaku = $sirumono->kakaku;
+                $randam->name = $sirumono->name;
+                $randam->genka = $sirumono->genka;
+                $randam->save();
+            } else {
+                $sirumonoshikui = $sirumonoshikui->shuffle();
+                $sirumonostakai = $sirumonostakai->shuffle();
+            }
+          }
+          $dt->addDay(1);
+        }
     }
     private function sirumono_create2() {
         $sirumonoshikui = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
