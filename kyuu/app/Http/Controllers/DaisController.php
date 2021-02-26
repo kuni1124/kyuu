@@ -372,12 +372,22 @@ class DaisController extends Controller
                 if(isset($shokuhikui[$hikui_count])){
                     $shoku = $shokuhikui[$hikui_count];
                     $hikui_count++;
+                }else{
+                    if(isset($shokutakai[$takai_count])){
+                        $shoku = $shokutakai[$takai_count];
+                        $takai_count++;
+                    }
                 }
                 $hikui = false;
             }else{
                 if(isset($shokutakai[$takai_count])){
                     $shoku = $shokutakai[$takai_count];
                     $takai_count++;
+                }else{
+                    if(isset($shokuhikui[$hikui_count])){
+                        $shoku = $shokuhikui[$hikui_count];
+                        $hikui_count++;
+                    }
                 }
                 $hikui = true;
             }
