@@ -14,7 +14,7 @@ class DaisController extends Controller
 {
     public function index()
     {
-        $randams = Dai::all();
+        $randams = Dai::orderBy('id')->get();
         $randams2 = Tyuu::all();
         $randams3 = Shou::all();
         $kakakus = [];
