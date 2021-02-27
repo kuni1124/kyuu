@@ -310,11 +310,11 @@ class DaisController extends Controller
     
         $count = 0;
         $dt = new Carbon('first day of next month');
-        $tukiowari =  $dt->daysInMonth;
+        // $tukiowari =  $dt->daysInMonth;
         $hikui = true;
         $hikui_count = 0;
         $takai_count = 0;
-        for ($i = 1;$i <= $tukiowari;$i++) {
+        for ($i = 1;$i <= 31;$i++) {
           if($dt->isSunday()){
             $randam3 = new Shou;
             $randam3->bunrui = null;
@@ -417,11 +417,11 @@ class DaisController extends Controller
     private function create_shoku_data($class_name, $shokuhikui, $shokutakai)
     {
         $dt = new Carbon('first day of next month');
-        $tukiowari =  $dt->daysInMonth;
+        // $tukiowari =  $dt->daysInMonth;
         $hikui = true;
         $hikui_count = 0;
         $takai_count = 0;
-        for ($i = 1;$i <= $tukiowari;$i++) {
+        for ($i = 1;$i <= 31;$i++) {
           if($dt->isSunday()){
             $this->empty_shoku_save($class_name);
         } else {
