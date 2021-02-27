@@ -77,12 +77,12 @@
         </table>
         </div>
         
-        </div>
+        
         <table class="table-a">
             <thead>
                 <tr>
                     <th>日付</th>
-                    <th>原価合計</th>
+                    <th>合計</th>
                 </tr>
             </thead>
             <tbody>
@@ -95,7 +95,7 @@
                 @endforeach
             </tbody>
         </table>
-        
+        </div>
   
 <!-- ここにページ毎のコンテンツを書く -->
 
@@ -120,9 +120,7 @@
     width:800px;
     
 }
-.table-a{
-    margin-top:5%;
-}
+
 .unko2{
     padding-top:58px;
 }
