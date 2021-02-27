@@ -64,7 +64,7 @@
                 @foreach ($randams3 as $num=>$randam3)
                 <tr>
                     <td>{{ $num+1 }}</td>
-                    <td>{{ $randam3->name }}</td>
+                    <td class="unko">{{ $randam3->name }}</td>
                     <td>{{ $randam3->genka }}</td>
                     <td>{!! Form::model($randam3, ['route' => ['randam-edit3', $randam3->id], 'method' => 'get']) !!}
                       {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
@@ -117,7 +117,7 @@
 }
 
 .unko{
-    width:600px;
+    width:800px;
     
 }
 .table-a{
