@@ -18,7 +18,7 @@ class CreateShousTable extends Migration
             $table->timestamps();
             $table->integer('bunrui')->nullable();
             $table->integer('kakaku')->nullable();
-            $table->integer('genka')->nullable();
+            $table->double('genka')->nullable();
             
             $table->string('name')->nullable();
         });

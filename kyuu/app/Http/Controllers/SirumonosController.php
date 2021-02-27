@@ -9,6 +9,7 @@ class SirumonosController extends Controller
     public function index()
     {
         $sirumonos = Sirumono::where('display', true)->orderBy('bunrui')->get();
+       
         //$shushokus = Shushoku::where('display', true);
 
         // メッセージ一覧ビューでそれを表示
@@ -29,14 +30,16 @@ class SirumonosController extends Controller
     // postでmessages/にアクセスされた場合の「新規登録処理」
     public function store(Request $request)
     {
+        
         $sirumono = new Sirumono;
         $sirumono->bunrui = $request->bunrui;
         $sirumono->kakaku = $request->kakaku;
         $sirumono->name = $request->name;
         $sirumono->genka = $request->genka;
+        
         $sirumono->display = true;
         $sirumono->save();
-
+        
         // $shushokus = Shushoku::all();
         // return view('shushokus.index', [
         //     'shushokus' => $shushokus,
