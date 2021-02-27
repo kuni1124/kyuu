@@ -144,42 +144,7 @@ class DaisController extends Controller
     //  $sirumonostakai = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '2')->get();
     //  $sirumonostakai = $sirumonostakai->shuffle();
     
-    //  $count = 0;
-
-    //  for ($i=0;$i<31;$i++){
-    //     $sirumono = null;
-    //     $div = intdiv($i,2);
-    //     if($i % 2 == 0 ){
-    //         if(isset($sirumonostakai[$div])){
-    //             $sirumono = $sirumonostakai[$div];
-    //         }
-           
-    //     }else{
-    //         if(isset($sirumonoshikui[$div])){
-    //             $sirumono = $sirumonoshikui[$div];
-    //         }
-    //     }
-    //     if(isset($sirumono)){
-    //     $randam3 = new Shou;
-    //     $randam3->bunrui = $sirumono->bunrui;
-    //     $randam3->kakaku = $sirumono->kakaku;
-    //     $randam3->name = $sirumono->name;
-    //     $randam3->genka = $sirumono->genka;
-    //     $randam3->save();
-    //     $count += 1;
-    //     }}
-
-    //     for ($i=0;$i<31-$count;$i++)  {
-    //         $randam3 = new Shou;
-    //         $randam3->bunrui = null;
-    //         $randam3->kakaku = null;
-    //         $randam3->name = null;
-    //         $randam3->genka = null;
-    //         $randam3->save();
-    //     }
-    //      return redirect('/randam-index')->with('flash_message', 'DELETE!');
-       
-    // }
+    
 
 
     public function edit($id)
@@ -343,8 +308,102 @@ class DaisController extends Controller
         $sirumonostakai = Sirumono::where('display', true)->where('bunrui' , '1')->where('kakaku' , '2')->get();
         $sirumonostakai = $sirumonostakai->shuffle();
     
-        $this->create_shoku_data('App\Shou', $sirumonoshikui, $sirumonostakai);
-    }
+        $count = 0;
+        $dt = new Carbon('first day of next month');
+        $tukiowari =  $dt->daysInMonth;
+        $hikui = true;
+        $hikui_count = 0;
+        $takai_count = 0;
+        for ($i = 1;$i <= $tukiowari;$i++) {
+          if($dt->isSunday()){
+            $randam3 = new Shou;
+            $randam3->bunrui = null;
+            $randam3->kakaku = null;
+            $randam3->name = null;
+            $randam3->genka = null;
+            $randam3->save();
+        } else {
+            $shoku = null;
+                
+            if($hikui){
+                if(isset($sirumonoshikui[$hikui_count])){
+                    $shoku = $sirumonoshikui[$hikui_count];
+                    $hikui_count++;
+                }else{
+                    if(isset($sirumonostakai[$takai_count])){
+                        $shoku = $sirumonostakai[$takai_count];
+                        $takai_count++;
+                    }
+                }
+                $hikui = false;
+            }else{
+                if(isset($sirumonostakai[$takai_count])){
+                    $shoku = $sirumonostakai[$takai_count];
+                    $takai_count++;
+                }else{
+                    if(isset($sirumonoshikui[$hikui_count])){
+                        $shoku = $sirumonoshikui[$hikui_count];
+                        $hikui_count++;
+                    }
+                }
+                $hikui = true;
+            }
+            
+            if(isset($shoku)){
+                $randam = new Shou;
+                $randam->bunrui = $shoku->bunrui;
+                $randam->kakaku = $shoku->kakaku;
+                $randam->name = $shoku->name;
+                $randam->genka = $shoku->genka;
+                $randam->save();
+              
+            } else{
+                $hikui = true;
+                $hikui_count = 0;
+                $takai_count = 0;
+
+                $shoku = null;
+                
+            if($hikui){
+                if(isset($sirumonoshikui[$hikui_count])){
+                    $shoku = $sirumonoshikui[$hikui_count];
+                    $hikui_count++;
+                }else{
+                    if(isset($sirumonostakai[$takai_count])){
+                        $shoku = $sirumonostakai[$takai_count];
+                        $takai_count++;
+                    }
+                }
+                $hikui = false;
+            }else{
+                if(isset($sirumonostakai[$takai_count])){
+                    $shoku = $sirumonostakai[$takai_count];
+                    $takai_count++;
+                }else{
+                    if(isset($sirumonoshikui[$hikui_count])){
+                        $shoku = $sirumonoshikui[$hikui_count];
+                        $hikui_count++;
+                    }
+                }
+                $hikui = true;
+            }
+            
+            if(isset($shoku)){
+                $randam = new Shou;
+                $randam->bunrui = $shoku->bunrui;
+                $randam->kakaku = $shoku->kakaku;
+                $randam->name = $shoku->name;
+                $randam->genka = $shoku->genka;
+                $randam->save();
+              
+            }}
+          }
+          $dt->addDay(1);
+          
+        }
+      
+       }
+    
     private function sirumono_create2() {
         $sirumonoshikui = Sirumono::where('display', true)->where('bunrui' , '2')->where('kakaku' , '1')->get();
         $sirumonoshikui = $sirumonoshikui->shuffle();

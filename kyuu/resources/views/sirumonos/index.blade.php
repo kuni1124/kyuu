@@ -17,7 +17,7 @@
                     <td>{{ $sirumono->bunrui }}</td>
                     <td>{{ $sirumono->kakaku }}</td>
                     <td>{{ $sirumono->name }}</td>
-                    <td>{{ $sirumono->genka }}</td>
+                    <td>{{ sprintf('%.2f',$sirumono->genka)}}</td>
                     <td>{!! Form::model($sirumono, ['route' => ['sirumono-edit', $sirumono->id], 'method' => 'get']) !!}
                       {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
                     {!! Form::close() !!}</td>
