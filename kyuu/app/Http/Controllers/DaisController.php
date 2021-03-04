@@ -19,7 +19,7 @@ class DaisController extends Controller
         $randams3 = Shou::orderBy('id')->get();
         $kakakus = [];
        
-        for ($i=0;$i<31;$i++){
+        for ($i=0;$i<38;$i++){
            
             $genka = isset($randams[$i]) ? $randams[$i]->genka : 0;
             //if (isset(randams)){
