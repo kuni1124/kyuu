@@ -273,7 +273,7 @@ class DaisController extends Controller
         $shushokushikui = $shushokushikui->shuffle();
         $shushokustakai = Shushoku::where('display', true)->where('bunrui' , '1')->where('kakaku' , '2')->get();
         $shushokustakai = $shushokustakai->shuffle();
-
+        
         $this->create_shoku_data('App\Dai', $shushokushikui, $shushokustakai);
     }
     
@@ -291,7 +291,9 @@ class DaisController extends Controller
         $fukushokushikui = $fukushokushikui->shuffle();
         $fukushokustakai = Fukushoku::where('display', true)->where('bunrui' , '1')->where('kakaku' , '1')->get();
         $fukushokustakai = $fukushokustakai->shuffle();
+        
         $this->create_shoku_data('App\Tyuu', $fukushokushikui, $fukushokustakai);
+        
     }
 
     private function fukushoku_create2() {
@@ -314,8 +316,8 @@ class DaisController extends Controller
         $hikui = true;
         $hikui_count = 0;
         $takai_count = 0;
-        for ($i = 1;$i <= 35;$i++) {
-          if($dt->isSunday()){
+        for ($i = 1;$i <= 38;$i++) {
+          if($dt->isSunday() or $dt->isSaturday()){
             $randam3 = new Shou;
             $randam3->bunrui = null;
             $randam3->kakaku = null;
@@ -416,8 +418,8 @@ class DaisController extends Controller
         $hikui = true;
         $hikui_count = 0;
         $takai_count = 0;
-        for ($i = 1;$i <= 35;$i++) {
-          if($dt->isSunday()){
+        for ($i = 1;$i <= 38;$i++) {
+          if($dt->isSunday() or $dt->isSaturday()){
             $randam3 = new Shou;
             $randam3->bunrui = null;
             $randam3->kakaku = null;
@@ -513,10 +515,14 @@ class DaisController extends Controller
         $hikui = true;
         $hikui_count = 0;
         $takai_count = 0;
-        for ($i = 1;$i <= 35;$i++) {
-          if($dt->isSunday()){
+        for ($i = 1;$i <= 38;$i++) {
+          if($dt->isSunday() or $dt->isSaturday()){
             $this->empty_shoku_save($class_name);
-        } else {
+           
+    
+          }
+        
+        else {
             $shoku = null;
                 
             if($hikui){
