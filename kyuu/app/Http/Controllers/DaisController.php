@@ -318,93 +318,93 @@ class DaisController extends Controller
         $takai_count = 0;
         for ($i = 1;$i <= 38;$i++) {
             //if($dt->isSunday() or $dt->isSaturday())
-          if($i == 6 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 7 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 13 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 14 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 20 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 21 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
-        elseif($i == 27 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        } elseif($i == 28 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        } elseif($i == 34 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        } elseif($i == 35 ){
-            $randam3 = new Shou;
-            $randam3->bunrui = null;
-            $randam3->kakaku = null;
-            $randam3->name = null;
-            $randam3->genka = null;
-            $randam3->save();
-          
-        }
+            if($i == 5 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 6 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 12 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 13 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 19 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 20 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 26 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            } elseif($i == 27 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            } elseif($i == 33 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            } elseif($i == 34 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
          else {
             $shoku = null;
                 
@@ -500,7 +500,7 @@ class DaisController extends Controller
         $hikui_count = 0;
         $takai_count = 0;
         for ($i = 1;$i <= 38;$i++) {
-            if($i == 6 ){
+            if($i == 5 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -509,7 +509,16 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 7 ){
+            elseif($i == 6 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }
+            elseif($i == 12 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -527,7 +536,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 14 ){
+            elseif($i == 19 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -545,7 +554,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 21 ){
+            elseif($i == 26 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -553,8 +562,7 @@ class DaisController extends Controller
                 $randam3->genka = null;
                 $randam3->save();
               
-            }
-            elseif($i == 27 ){
+            } elseif($i == 27 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -562,7 +570,7 @@ class DaisController extends Controller
                 $randam3->genka = null;
                 $randam3->save();
               
-            } elseif($i == 28 ){
+            } elseif($i == 33 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -571,14 +579,6 @@ class DaisController extends Controller
                 $randam3->save();
               
             } elseif($i == 34 ){
-                $randam3 = new Shou;
-                $randam3->bunrui = null;
-                $randam3->kakaku = null;
-                $randam3->name = null;
-                $randam3->genka = null;
-                $randam3->save();
-              
-            } elseif($i == 35 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -676,36 +676,36 @@ class DaisController extends Controller
         $hikui_count = 0;
         $takai_count = 0;
         for ($i = 1;$i <= 38;$i++) {
-            if($i == 6 ){
+            if($i == 5 ){
                 $this->empty_shoku_save($class_name);
             }
-            elseif($i == 7 ){
+            elseif($i == 6 ){
                 $this->empty_shoku_save($class_name);
               
+            }
+            elseif($i == 12 ){
+                $this->empty_shoku_save($class_name);
             }
             elseif($i == 13 ){
                 $this->empty_shoku_save($class_name);
-            }
-            elseif($i == 14 ){
-                $this->empty_shoku_save($class_name);
               
             }
-            elseif($i == 20 ){
+            elseif($i == 19 ){
                 $this->empty_shoku_save($class_name);;
               
             }
-            elseif($i == 21 ){
+            elseif($i == 20 ){
                 $this->empty_shoku_save($class_name);
             }
-            elseif($i == 27 ){
+            elseif($i == 26 ){
                 $this->empty_shoku_save($class_name);
               
-            } elseif($i == 28 ){
+            } elseif($i == 27 ){
                 $this->empty_shoku_save($class_name);
               
+            } elseif($i == 33 ){
+                $this->empty_shoku_save($class_name);
             } elseif($i == 34 ){
-                $this->empty_shoku_save($class_name);
-            } elseif($i == 35 ){
                 $this->empty_shoku_save($class_name);
             }
         
