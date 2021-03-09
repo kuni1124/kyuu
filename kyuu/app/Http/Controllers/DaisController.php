@@ -318,7 +318,7 @@ class DaisController extends Controller
         $takai_count = 0;
         for ($i = 1;$i <= 38;$i++) {
             //if($dt->isSunday() or $dt->isSaturday())
-            if($i == 6 ){
+            if($i == 1 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -336,7 +336,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 13 ){
+            elseif($i == 8 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -354,7 +354,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 20 ){
+            elseif($i == 15 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -372,7 +372,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 27 ){
+            elseif($i == 22 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -388,7 +388,7 @@ class DaisController extends Controller
                 $randam3->genka = null;
                 $randam3->save();
               
-            } elseif($i == 34 ){
+            } elseif($i == 29 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -397,6 +397,14 @@ class DaisController extends Controller
                 $randam3->save();
               
             } elseif($i == 35 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            }elseif($i == 36 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -500,7 +508,7 @@ class DaisController extends Controller
         $hikui_count = 0;
         $takai_count = 0;
         for ($i = 1;$i <= 38;$i++) {
-            if($i == 6 ){
+            if($i == 1 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -518,7 +526,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 13 ){
+            elseif($i == 8 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -536,7 +544,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 20 ){
+            elseif($i == 15 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -554,7 +562,7 @@ class DaisController extends Controller
                 $randam3->save();
               
             }
-            elseif($i == 27 ){
+            elseif($i == 22 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -570,7 +578,7 @@ class DaisController extends Controller
                 $randam3->genka = null;
                 $randam3->save();
               
-            } elseif($i == 34 ){
+            } elseif($i == 29 ){
                 $randam3 = new Shou;
                 $randam3->bunrui = null;
                 $randam3->kakaku = null;
@@ -586,7 +594,16 @@ class DaisController extends Controller
                 $randam3->genka = null;
                 $randam3->save();
               
-            }else {
+            }elseif($i == 36 ){
+                $randam3 = new Shou;
+                $randam3->bunrui = null;
+                $randam3->kakaku = null;
+                $randam3->name = null;
+                $randam3->genka = null;
+                $randam3->save();
+              
+            } 
+            else {
             $shoku = null;
                 
             if($hikui){
