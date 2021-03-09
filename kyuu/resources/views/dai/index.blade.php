@@ -77,7 +77,7 @@
         </table>
         </div>
         </div>
-        
+      <div class="hyou">
         <table class="table-a">
             <thead>
                 <tr>
@@ -95,7 +95,147 @@
                 @endforeach
             </tbody>
         </table>
-       
+        <table class="border">
+          <tr>
+             <th>月</th>
+             <th>火</th>
+             <th>水</th>
+             <th>木</th>
+             <th>金</th>
+             <th>土</th>
+             <th>日</th>
+          </tr>
+          <tr>
+             <td>
+               <tb>1</tb>
+             </td>
+               <td>
+             <tb>2</tb>
+               </td>
+             <td>
+               <tb>3</tb>
+             </td>
+               <td>
+             <tb>4</tb>
+               </td>
+             <td>
+               <tb>5</tb>
+             </td>
+             <td>
+               <tb>6</tb>
+             </td>
+             <td>
+               <tb>7</tb>
+             </td>
+          </tr>
+          <tr>
+             <td>
+               <tb>8</tb>
+             </td>
+               <td>
+             <tb>9</tb>
+               </td>
+             <td>
+               <tb>10</tb>
+             </td>
+               <td>
+             <tb>11</tb>
+               </td>
+             <td>
+               <tb>12</tb>
+             </td>
+             <td>
+               <tb>13</tb>
+             </td>
+             <td>
+               <tb>14</tb>
+             </td>
+          </tr>
+          <tr>
+             <td>
+               <tb>15</tb>
+             </td>
+               <td>
+             <tb>16<br></tb>
+               </td>
+             <td>
+               <tb>17</tb>
+             </td>
+               <td>
+             <tb>18</tb>
+               </td>
+             <td>
+               <tb>19</tb>
+             </td>
+             <td>
+               <tb>20</tb>
+             </td>
+             <td>
+               <tb>21</tb>
+             </td>
+          </tr>
+          <tr>
+             <td>
+               <tb>22</tb>
+             </td>
+               <td>
+             <tb>23</tb>
+               </td>
+             <td>
+               <tb>24</tb>
+             </td>
+               <td>
+             <tb>25</tb>
+               </td>
+             <td>
+               <tb>26</tb>
+             </td>
+             <td>
+               <tb>27</tb>
+             </td>
+             <td>
+               <tb>28</tb>
+             </td>
+          </tr>
+          <tr>
+             <td>
+               <tb>29</tb>
+             </td>
+               <td>
+             <tb>30</tb>
+               </td>
+             <td>
+               <tb>31</tb>
+             </td>
+               <td>
+             <tb>32</tb>
+               </td>
+             <td>
+               <tb>33</tb>
+             </td>
+             <td>
+               <tb>34</tb>
+             </td>
+             <td>
+               <tb>35</tb>
+             </td>
+          </tr>
+          <tr>
+             <td>
+               <tb>36</tb>
+             </td>
+               <td>
+             <tb>37</tb>
+               </td>
+             <td>
+               <tb>38</tb>
+             </td>
+            
+          </tr>
+          
+            
+        </table>
+      </div> 
   
 <!-- ここにページ毎のコンテンツを書く -->
 
@@ -125,5 +265,23 @@
     padding-top:15px;
    
 }
+.hyou{
+    display:flex;
+}
 
+.border{
+    text-align:center;
+    width:800px;
+    height:300px;
+    border: solid 1px #000000;
+}
+.border th{
+    border: solid 1px #000000;
+}
+.border tr{
+    border: solid 1px #000000;
+}
+.border td{
+    border: solid 1px #000000;
+}
 </style>
